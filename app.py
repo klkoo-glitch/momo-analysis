@@ -10,7 +10,7 @@ st.set_page_config(page_title="모모유부 통합 분석 시스템", layout="wi
 st.title("📊 모모유부 지점별 정밀 성과 분석 (고객 데이터 분석.v1)")
 
 # 파일 경로
-file_path = r'C:\Users\Administrator\OneDrive\바탕 화면\python_study\지점별 샘플러스 데이터_2025.12.29.xlsx'
+file_path = '지점별 샘플러스 데이터_2025.12.29.xlsx'
 DUPLICATE_LIMIT = 30 # 중복 결제 기준 30분
 
 @st.cache_data(ttl=600)
@@ -238,4 +238,5 @@ if status == "SUCCESS" and df_main is not None:
     st.dataframe(display_df, use_container_width=True)
 
 else:
+
     st.error(f"오류: {status}")
